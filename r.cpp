@@ -9,9 +9,9 @@ void calculateCorrelation(int n) {
 
     // Collect data for both series
     for (int i = 0; i < n; i++) {
-        cout << "Enter value for X[" << i + 1 << "]: ";
+        cout << "Value for X[" << i + 1 << "]: ";
         cin >> x;
-        cout << "Enter value for Y[" << i + 1 << "]: ";
+        cout << "Value for Y[" << i + 1 << "]: ";
         cin >> y;
 
         sumX += x;    // Sum of X
@@ -35,7 +35,7 @@ void calculateCorrelation(int n) {
 
 int main() {
     int n;
-    cout << "Enter the number of pairs in the series: ";
+    cout << "Number of pairs: ";
     cin >> n;
 
     // Call the function to calculate correlation
