@@ -7,13 +7,13 @@ int main() {
     int n;
     double sumLogX = 0.0, geometricMean;
 
-    cout << "Enter the number of elements (n): ";
+    cout << "Number of elements (n): ";
     cin >> n;
 
     float x[n]; // Array to hold the values of the series
 
     for (int i = 0; i < n; i++) {
-        cout << "Enter value for x" << i + 1 << ": ";
+        cout << "Value " << i + 1 << ": ";
         cin >> x[i];
         
         // Calculate the logarithm of xi and add to the sum
@@ -24,7 +24,7 @@ int main() {
     geometricMean = exp(sumLogX / n);
 
     cout << fixed << setprecision(5); // Set precision for output
-    cout << "Geometric Mean of the entered individual series is: " << geometricMean << endl;
+    cout << "GM is: " << geometricMean << endl;
 
     return 0;
 }
