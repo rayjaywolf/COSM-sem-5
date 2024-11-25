@@ -6,7 +6,7 @@ void sdInd(int n, float x[]) {
     double sumX = 0, sumXsqr = 0, sd = 0;
 
     for (int i = 0; i < n; i++) {
-        cout << "Enter element " << i + 1 << ": ";
+        cout << "Element " << i + 1 << ": ";
         cin >> x[i];
         sumX += x[i];
         sumXsqr += x[i] * x[i];
@@ -18,7 +18,7 @@ void sdInd(int n, float x[]) {
 
 int main() {
     int n;
-    cout << "Enter the number of elements in the series: ";
+    cout << "Number of elements: ";
     cin >> n;
 
     float x[n];
