@@ -9,13 +9,13 @@ int main() {
     double sumFLogX = 0.0, geometricMean, N = 0;
 
     // Input number of elements
-    cout << "Enter the number of elements (n): ";
+    cout << "Number of elements (n): ";
     cin >> n;
 
     // Input first variable and interval
-    cout << "Enter the first variable: ";
+    cout << "First Variable: ";
     cin >> first;
-    cout << "Enter the interval: ";
+    cout << "Interval: ";
     cin >> interval;
 
     float frequencies[n]; // Array to hold frequencies
@@ -24,7 +24,7 @@ int main() {
     // Loop to input frequencies and calculate sum of f*log(x)
     for (int i = 0; i < n; i++) {
         x = first + i * interval; // Calculate current variable
-        cout << "Enter the frequency for variable " << x << ": ";
+        cout << "Frequency for var " << x << ": ";
         cin >> frequencies[i];
 
         // Calculate sum of f*log(x)
@@ -35,7 +35,7 @@ int main() {
     // Calculate the geometric mean using the formula:
     geometricMean = exp(sumFLogX / N);
 
-    cout << "Geometric Mean of the entered discrete frequency distribution is: " << geometricMean << endl;
+    cout << "GM is: " << geometricMean << endl;
 
     return 0;
 }
