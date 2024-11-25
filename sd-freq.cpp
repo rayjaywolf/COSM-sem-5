@@ -8,31 +8,28 @@ void calculateSD(int n, int seriesType) {
 
     if (seriesType==1)
     { 
-        cout << "Enter the first variable: ";
+        cout << "First variable: ";
         cin >> first;
     }
     else
     {
-        cout << "Enter the lower limit of first class: ";
+        cout << "Lower Limit: ";
         cin >> first;
     }
-    cout << "Enter the interval : ";
+    cout << "Interval : ";
     cin >> interval;
 
     for (int i = 0; i < n; i++) {
         if (seriesType == 1) { // Discrete Series
             x = first; // Set the current variable
-            cout << "Enter frequency for variable " << x << ": ";
+            cout << "Frequency for variable " << x << ": ";
         } else if (seriesType == 2) { // Continuous Series
             float l = first;  // Lower limit
             float u = first + interval;  // Upper limit
             x = (l + u) / 2; // Midpoint calculation
-            cout << "Enter frequency for class " << i + 1 << " (" << l << " - " << u << "): ";
-        } else {
-            cout << "Invalid Series Type!" << endl;
-            return; // Exit if invalid type
+            cout << "Frequency for class " << i + 1 << " (" << l << " - " << u << "): ";
         }
-        cin >> f; // Input frequency
+        cin >> f;
         sumfx += f * x;
         sumfxsqr += f * pow(x, 2);
         N += f;
@@ -44,9 +41,9 @@ void calculateSD(int n, int seriesType) {
 
 int main() {
     int n, option;
-    cout << "Choose series type:\n1. Discrete Series\n2. Continuous Series\nEnter choice: ";
+    cout << "Series type:\n1. Discrete \n2. Continuous \nEnter choice: ";
     cin >> option;
-    cout << "Enter the number of elements or classes in the series: ";
+    cout << "Number of elements: ";
     cin >> n;
     calculateSD(n, option);
 
